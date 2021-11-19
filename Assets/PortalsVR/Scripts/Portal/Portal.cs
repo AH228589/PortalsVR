@@ -49,7 +49,8 @@ namespace PortalsVR
             {
                 portalInfo[eye].screenMeshFilter = portalInfo[eye].screen.GetComponent<MeshFilter>();
                 portalInfo[eye].screen.material.SetInt("displayMask", 1);
-                portalInfo[eye].viewTexture = new RenderTexture(XRSettings.eyeTextureWidth, XRSettings.eyeTextureHeight, 24);
+                //portalInfo[eye].viewTexture = new RenderTexture(XRSettings.eyeTextureWidth, XRSettings.eyeTextureHeight, 24);
+                portalInfo[eye].viewTexture = new RenderTexture(824, 840, 24);
                 portalInfo[eye].camera.targetTexture = portalInfo[eye].viewTexture;
                 linkedPortal.portalInfo[eye].screen.material.SetTexture("_MainTex", portalInfo[eye].viewTexture);
             }
